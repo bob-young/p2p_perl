@@ -139,9 +139,10 @@ sub user_in{
 					);
 	my @d_button;
 	my @d_label;
+	#---download list
 	for(0..($file_num-1)){
 		my $tmp=$_;
-		$d_label[$_]=$table_frame->Label(-text => "file # $files[$_]",-anchor => 'w',-relief => "groove",-width => 45);
+		$d_label[$_]=$table_frame->Label(-text => "file # $files[$_]",-anchor => 'w',-relief => "groove");
 		$d_button[$_]=$table_frame->Button(-text => "Download$_",-command => sub{download($d_button[$tmp])});
 		
 		$table_frame->put($_,1,$d_label[$_]);
